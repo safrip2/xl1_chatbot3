@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengubah font menjadi Segoe UI */
+}
+
+.sidebar-bg {
+    background-color: #18448A;
+    position: sticky; /* Membuat sidebar tetap di posisi saat di-scroll */
+    top: 0; /* Menempelkan sidebar ke bagian atas layar */
+    height: 100vh; /* Tinggi sidebar sama dengan tinggi viewport */
+}
+
+.main-bg {
+    background-color: #EEEEEE;
+}
+
+#main-bg {
+    /* justify-content: flex-end; */ /* Hapus pengaturan ini */
+    padding-top: 100px; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Biarkan area chat mengisi ruang yang tersedia */
+}
+
+
+
+#chat-response-box {
+    overflow-y: auto; /* Tambahkan overflow-y: auto */
+    padding: 20px;
+    flex-grow: 1; /* Biarkan area chat mengisi ruang yang tersedia */
+}
+
+/*#chat-input-box {
+    padding: 20px;
+    background-color: #f8f9fa; /* Memberi latar belakang pada area input 
+    border-top: 1px solid #dee2e6; /* Menambahkan garis pemisah 
+}*/
+
+#chat-input-box {
+    padding: 20px;
+    margin-top: 10px; 
+    background-color: #EEEEEE; 
+    border-top: none;
+}
+
+.input-group {
+    background-color: #EEEEEE !important; /* Mengubah warna latar belakang input group menjadi putih */
+    border: 1px solid #eeeeee !important; /* Menambahkan border tipis */
+    border-radius: 25px !important;
+}
+
+/* Input Pengguna */
+.form-control {
+    background-color: white !important; /* Latar belakang putih */
+    border: 1px solid #ced4da !important; /* Border abu-abu */
+    border-radius: 25px !important; /* Border radius yang lebih besar */
+    padding: 15px !important; /* Padding lebih besar */
+}
+
+.form-control::placeholder {
+    color: #6c757d !important; /* Warna placeholder abu-abu */
+}
+
+.input-group-text {
+    background-color: #1AACAC !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 15px !important;
+}
+
+#send-btn i {
+    color: white;
+}
+
+/* Chat Bubbles */
+.chat-message {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.chat-message .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.chat-message .message-content {
+    background-color: #ddd; /* Latar belakang abu-abu */
+    border-radius: 15px;
+    padding: 3px 5px;
+    max-width: fit-content; /* Lebar maksimum menyesuaikan dengan konten */
+    word-wrap: break-word;
+}
+
+.chat-message.user .message-content {
+    align-self: flex-end;
+    background-color: #e0e0e0; /* Abu-abu lebih terang untuk pesan pengguna */
+}
+
+.chat-message.bot .message-content {
+    align-self: flex-start;
+}
+
+.chat-message .timestamp {
+    font-size: 0.8em;
+    color: #6c757d;
+    margin-top: 5px;
+    text-align: right; /* Sejajarkan timestamp ke kanan bawah */
+    width: 100%; /* Penting untuk membuat timestamp berada di pojok kanan bawah */
+}
+
+/* Responsiveness untuk Chat Bubbles */
+@media (max-width: 768px) {
+    .chat-message {
+        margin-bottom: 10px;
+    }
+    .chat-message .message-content {
+        padding: 8px;
+    }
+}
